@@ -1,0 +1,1 @@
+pip download --proxy http://192.168.209.66:8084/ -r requirements.txt -d wheelhouse

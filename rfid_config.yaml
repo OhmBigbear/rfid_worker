@@ -1,0 +1,59 @@
+# rfid_config.yaml
+# DSN to TimescaleDB/PostgreSQL (adjust user/password/db as needed)
+db_dsn: postgresql://rfid:P@ssw0rd@localhost:5432/rfid_db
+
+# Number of rounds for continuous inventory command: 0 = unlimited
+default_inventory_count: 0
+
+# List your RFID readers here
+readers:
+  - reader_id: RFID-01
+    enabled: true
+    connection: tcp
+    tcp:
+      host: 192.168.211.198
+      port: 20108
+    # inventory_count: 0  # optional; overrides default_inventory_count for this reader
+
+  - reader_id: RFID-02
+    enabled: true
+    connection: tcp
+    tcp:
+      host: 192.168.216.166
+      port: 20108
+    # inventory_count: 0
+
+  - reader_id: RFID-03
+    enabled: false
+    connection: tcp
+    tcp:
+      host: 192.168.231.229
+      port: 20108
+    # inventory_count: 0
+
+  - reader_id: RFID-04
+    enabled: false
+    connection: tcp
+    tcp:
+      host: 192.168.231.228
+      port: 20108
+    # inventory_count: 0
+
+  - reader_id: RFID-05
+    enabled: false
+    connection: tcp
+    tcp:
+      host: 192.168.231.230
+      port: 20108
+    # inventory_count: 0
+
+  - reader_id: RFID-06
+    enabled: false
+    connection: tcp
+    tcp:
+      host: 192.168.231.231
+      port: 20108
+    # inventory_count: 0
+# Tips:
+# - Set LOG_LEVEL=DEBUG in your environment for verbose logs when troubleshooting.
+# - Ensure your OS user is in the 'dialout' group for serial access on Ubuntu.

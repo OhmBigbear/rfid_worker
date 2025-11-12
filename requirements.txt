@@ -1,0 +1,7 @@
+# requirements.txt
+# Tested with Python 3.8–3.12 on Ubuntu 20.04 / 24.04
+
+pyserial>=3.5,<4.0          # Serial/USB connection (safe to keep even if using TCP only)
+psycopg2-binary>=2.9,<3.0   # PostgreSQL/TimescaleDB driver
+PyYAML>=6.0.1,<7.0          # YAML config parsing
+loguru>=0.7,<0.8            # Structured logging with rotation/retention
